@@ -27,7 +27,7 @@ jobs:
   style:
     name: Style
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -41,3 +41,5 @@ jobs:
         run: npm ci
       - name: Check formatting
         run: npm run format:check
+      - name: Check for linting
+        run: npm run lint 
